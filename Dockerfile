@@ -1,4 +1,4 @@
-FROM node:16-alpine AS front
+FROM node:18.20.7-alpine AS front
 
 RUN apk update
 RUN apk add git
@@ -19,7 +19,7 @@ RUN go run gen_web.go \
 	&& go clean -i -r -cache \
 	&& go build -ldflags '-w -s' --o "torrserver" ./cmd 
 
-FROM debian:buster-slim AS compressed
+FROM ubuntu:latest AS compressed
 
 COPY --from=builder ./server/torrserver ./torrserver
 
