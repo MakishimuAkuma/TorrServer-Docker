@@ -1,4 +1,4 @@
-FROM node:18.20.7-alpine AS front
+FROM node:16-alpine AS front
 
 RUN apk update
 RUN apk add git
