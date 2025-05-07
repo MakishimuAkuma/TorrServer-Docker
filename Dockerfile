@@ -21,4 +21,4 @@ RUN chmod +x "/docker-entrypoint.sh"
 
 RUN apk add --no-cache --update ffmpeg
 
-CMD [ "/docker-entrypoint.sh" ]
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
