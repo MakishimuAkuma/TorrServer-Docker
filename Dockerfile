@@ -8,12 +8,12 @@ ENV TS_PORT=8090
 RUN touch "/usr/bin/torrserver"
 
 RUN case "$TARGETPLATFORM" in \
-        "linux/386") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-386" >> "/usr/bin/torrserver" ;; \
-        "linux/amd64") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-amd64" >> "/usr/bin/torrserver" ;; \
-        "linux/arm/v6") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-arm5" >> "/usr/bin/torrserver" ;; \
-        "linux/arm/v7") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-arm7" >> "/usr/bin/torrserver" ;; \
-        "linux/arm64/v8") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-arm64" >> "/usr/bin/torrserver" ;; \
-        "linux/riscv64") curl "https://github.com/YouROK/TorrServer/releases/download/MatriX.135/TorrServer-linux-riscv64" >> "/usr/bin/torrserver" ;; \
+        "linux/386") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-386" >> "/usr/bin/torrserver" ;; \
+        "linux/amd64") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-amd64" >> "/usr/bin/torrserver" ;; \
+        "linux/arm/v6") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-arm5" >> "/usr/bin/torrserver" ;; \
+        "linux/arm/v7") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-arm7" >> "/usr/bin/torrserver" ;; \
+        "linux/arm64/v8") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-arm64" >> "/usr/bin/torrserver" ;; \
+        "linux/riscv64") curl "https://github.com/YouROK/TorrServer/releases/latest/download/TorrServer-linux-riscv64" >> "/usr/bin/torrserver" ;; \
     esac
 	
 ADD "https://raw.githubusercontent.com/YouROK/TorrServer/refs/heads/master/docker-entrypoint.sh" "/docker-entrypoint.sh"
